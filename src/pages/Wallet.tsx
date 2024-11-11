@@ -20,7 +20,7 @@ export default function Wallet() {
 
   const user = useUserStore();
 
-  console.log(user, "============user=======")
+  console.log(tonConnectUI, "============tonConnectUI=======")
 
   const tonPay = useTonPay({
     onSuccess: () => toast.success("Your transaction has been completed"),

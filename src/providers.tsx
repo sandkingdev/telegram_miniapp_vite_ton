@@ -13,11 +13,14 @@ const queryClient = new QueryClient({
   },
 });
 
+export const WALLET_MANIFEST_URL =
+  "https://yellow-patient-cheetah-559.mypinata.cloud/ipfs/Qman9QdYTU85oVqkyfY7ZoKNHJNjNStASeoL1fQWKkrLoR";
+
 export default function Providers({ children }: PropsWithChildren) {
   return (
     <QueryClientProvider client={queryClient}>
       <TonConnectUIProvider
-        manifestUrl={`${import.meta.env.VITE_APP_URL}/tonconnect-manifest.json`}
+        manifestUrl={WALLET_MANIFEST_URL}
       >
         {children}
       </TonConnectUIProvider>
