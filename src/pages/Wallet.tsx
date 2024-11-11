@@ -20,6 +20,8 @@ export default function Wallet() {
 
   const user = useUserStore();
 
+  console.log(user, "============user=======")
+
   const tonPay = useTonPay({
     onSuccess: () => toast.success("Your transaction has been completed"),
     onError: () => toast.error("Request rejected"),
