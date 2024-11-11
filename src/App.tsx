@@ -68,7 +68,6 @@ function App() {
   }, [balance, levels]);
 
   useEffect(() => {
-    console.log(user, "=========user=========")
     if (!user) return () => {};
 
     const signIn = async () => {
@@ -117,7 +116,7 @@ function App() {
     signIn().then(() => setShowSplashScreen(false));
   }, [user]);
 
-  // if (!user || isDisktop) return <PlayOnYourMobile />;
+  if (!user || isDisktop) return <PlayOnYourMobile />;
 
   if (showSplashScreen) return <SplashScreen />;
 
