@@ -68,6 +68,7 @@ function App() {
   }, [balance, levels]);
 
   useEffect(() => {
+    console.log(user, "=========user=========")
     if (!user) return () => {};
 
     const signIn = async () => {
